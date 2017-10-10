@@ -7,13 +7,20 @@ driver = webdriver.Chrome()
 
 # or you can set driver in PATH
 
-driver.set_page_load_timeout(10)
-driver.get("https://google.com")
-driver.find_element_by_name("q").send_keys("Automation step by step")
-driver.find_element_by_name("btnK").send_keys(Keys.ENTER)
-time.sleep(4)
-driver.quit()
-driver.quit()
+driver.set_page_load_timeout(5)
+driver.get("https://rvision.exadel.com")
+driver.maximize_window()
+driver.find_element_by_xpath("//input[@type='text'][@name='loginForm:login']").send_keys("amazur")
+driver.find_element_by_xpath("//input[@type='password'][@name='loginForm:password']").send_keys("Password12")
+driver.find_element_by_xpath("//input[@type='submit'][@name='loginForm:j_idt39']").click()
 
-print("Test has been successfully passed")
+time.sleep(2)
+
+driver.find_element_by_xpath("//span[text()='Reports']").click()
+driver.find_element_by_xpath("//span[text()='Time Offs']").click()
+
+
+#driver.quit()
+
+
 
