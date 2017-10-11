@@ -23,10 +23,11 @@ time.sleep(1)
 driver.find_element_by_xpath("//select[@name='resourceForm:offices']")
 driver.find_element_by_xpath("//option[text()='--UA V Exadel']").click()
 driver.find_element_by_xpath("//input[@type='submit'][@name='resourceForm:apply_button']").click()
-time.sleep(3)
 
 
-driver.quit()
+
+
+
 
 
 
